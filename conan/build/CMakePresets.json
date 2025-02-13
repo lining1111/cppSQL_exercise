@@ -1,0 +1,41 @@
+{
+    "version": 3,
+    "vendor": {
+        "conan": {}
+    },
+    "cmakeMinimumRequired": {
+        "major": 3,
+        "minor": 15,
+        "patch": 0
+    },
+    "configurePresets": [
+        {
+            "name": "conan-debug",
+            "displayName": "'conan-debug' config",
+            "description": "'conan-debug' configure using 'Unix Makefiles' generator",
+            "generator": "Unix Makefiles",
+            "cacheVariables": {
+                "CMAKE_POLICY_DEFAULT_CMP0091": "NEW",
+                "CMAKE_BUILD_TYPE": "Debug"
+            },
+            "toolchainFile": "conan_toolchain.cmake",
+            "binaryDir": "/home/lining/CLionProjects/cppSQL_exercise/conan/build"
+        }
+    ],
+    "buildPresets": [
+        {
+            "name": "conan-debug",
+            "configurePreset": "conan-debug",
+            "jobs": 4
+        }
+    ],
+    "testPresets": [
+        {
+            "name": "conan-debug",
+            "configurePreset": "conan-debug",
+            "environment": {
+                "OPENSSL_MODULES": "/home/lining/.conan2/p/b/opens06246c736a198/p/lib/ossl-modules"
+            }
+        }
+    ]
+}

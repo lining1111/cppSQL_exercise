@@ -1,0 +1,1 @@
+. "/home/lining/CLionProjects/cppSQL_exercise/conan/build/conanrunenv-debug-x86_64.sh"
