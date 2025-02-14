@@ -35,36 +35,32 @@
 
     所有的操作都是在一个测试文件的main中以 注册Data组件、打开数据库、操作、注销Data组件 4步。其中操作是作练习的主要代码段
 
-#### 查询
-##### ch1
+#### 基本练习(增删改查)
 
+##### 查询 
+
+    ch1
     查询，有条件查询(升降序(order by  asc/desc)、条件筛选(where and/or))
 
-##### ch2
-
+    ch2
     聚合函数 min/max/count/sum/avg
     
-##### ch3
-
+    ch3
     分组 group by 将查询结果按照特定的字段进行分组，然后进行统计(用聚合函数进行统计计算)
 
-##### ch4
-
+    ch4
     表关联 join，出现的原因是，数据量往往会很大，需要将一个大表拆分成几个小的表，表与表之间通过key来进行关联
     txx1 inner/left/right/outer join txx2  on txx1.xx=txx2.xx
 
-##### ch5
-
+    ch5
     限制查询输出条目 limit
     使用场景是 1、尝试看下数据的表结构是什么样的
              2、和排序一起使用，得到排名前几的信息
     
-##### ch6
-
+    ch6
     存在 having 与where的使用比较相近，都是用来筛选子集的，但是having需要和group by 一起使用
 
-##### ch7
-
+    ch7
     窗口函数，两类
     1、聚合5类函数，min max sum avg count 等
     2、特殊函数，
@@ -91,55 +87,57 @@
                 range between xxx and xxx <用于分组后取子集>)
     **窗口函数有点难的，可以多次练习**
         
-#### 插入
+##### 插入
 
-##### ch8
-
+    ch8
     insert 插入
         insert into table xxx(col1,col2,...,colx) values(val1,val2,...,valx)
 
-#### 更新
+##### 更新
     
+    ch9
     update 更新
         update table set col=val where condition
 
-#### 删除
+##### 删除
 
+    ch10
     delete 删除
         delete from table where condition
 
-#### 条件表达式
+##### 条件表达式
 
+    condition.cpp
     使用场景：基于数值类型的colume生成新的colume
 
     1、if(condition，true_value,false_value)
 
     2、case when condtion1 then value1 when condition2 then value2 else result end
 
-#### count
+##### count
 
     进行记录条目数的计算，通常还会与 distinct 一起使用来剔除指为null的列
 
-#### as
+##### as
 
     将结果的列名进行重命名；或者对查询获得的底表(结果)进行重命名
 
-#### union/union all
+##### union/union all
     
     与 jion 类似，都是两个表的联合查询，不同的是，jion是列数增加，丰富单个记录的属性数量；union是行数增加，丰富记录的条目数，所以有个前提是两个表的列数必须一致，且位置相同的列的数据类型必须一致。
     union 会删除重复的行
     union all 会保留重复的行
 
-#### concat/concat_ws(concat_ws就是concat with separator)
+##### concat/concat_ws(concat_ws就是concat with separator)
 
     文本函数，将多个字符串进行拼接
 
-#### 日期
+##### 日期
 
     可以参考 https://www.runoob.com/sql/sql-dates.html
     时间函数可以不用记得那么多，因为不同的数据库框架，能够使用的日期函数数量并不一样，可以在自己的ide的数据库组件中尝试实验后，再决定怎么使用。
     
-#### 视图
+##### 视图
 
     视图语句通常使用在数据库的建表sql语句中，在code代码段中并不常见
 
@@ -147,6 +145,15 @@
     SELECT column1, column2, ...
     FROM table_name
     WHERE condition;
+
+#### 按需练习
+
+    ch11
+    从用户表和订单表内查出没有下过订单的用户
+    ch12
+    查找每位用户旅行的总距离
+    ch13 考查行转列
+    有一个产品表(产品id，商店名，售价),得到每个产品在不同商店的价格
 
 ## 其他的扩展
     

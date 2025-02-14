@@ -40,6 +40,33 @@ namespace mydata {
         string record_date;//考试时间
     } StuScore;
 
+    typedef struct Customers {
+        string id;//用户id
+        string name;//用户名
+    } Customers;
+
+    typedef struct Orders {
+        string id;//订单id
+        string customerID;//下单用户ID
+    } Orders;
+
+    typedef struct Users {
+        string id;//用户id
+        string name;//用户名
+    } Users;
+
+    typedef struct Rides {
+        string id;//旅行id
+        string UserID;//用户ID
+        float distance;//旅行距离
+    } Rides;
+
+    typedef struct CH13_products{
+        string id;
+        string store;
+        float price;
+    }CH13_products;
+
 }
 
 
