@@ -16,7 +16,10 @@
                                     的连接和数据一致性维护。通常用于实现数据库的关系
                                     模型，
 
-## 新建sqlite3数据库
+## 数据库sqlite3
+
+
+### 新建sqlite3数据库
 
     linux安装sqlite3环境参考 
     新建数据库：
@@ -28,39 +31,39 @@
     
     后面的操作主要是依靠ide的数据库插件和代码来进行sql的练习
 
-## 练习
+### cpp-code练习
 
     所有的操作都是在一个测试文件的main中以 注册Data组件、打开数据库、操作、注销Data组件 4步。其中操作是作练习的主要代码段
 
-### 查询
-#### ch1
+#### 查询
+##### ch1
 
     查询，有条件查询(升降序(order by  asc/desc)、条件筛选(where and/or))
 
-#### ch2
+##### ch2
 
     聚合函数 min/max/count/sum/avg
     
-#### ch3
+##### ch3
 
     分组 group by 将查询结果按照特定的字段进行分组，然后进行统计(用聚合函数进行统计计算)
 
-#### ch4
+##### ch4
 
     表关联 join，出现的原因是，数据量往往会很大，需要将一个大表拆分成几个小的表，表与表之间通过key来进行关联
     txx1 inner/left/right/outer join txx2  on txx1.xx=txx2.xx
 
-#### ch5
+##### ch5
 
     限制查询输出条目 limit
     使用场景是 1、尝试看下数据的表结构是什么样的
              2、和排序一起使用，得到排名前几的信息
     
-#### ch6
+##### ch6
 
     存在 having 与where的使用比较相近，都是用来筛选子集的，但是having需要和group by 一起使用
 
-#### ch7
+##### ch7
 
     窗口函数，两类
     1、聚合5类函数，min max sum avg count 等
@@ -88,24 +91,24 @@
                 range between xxx and xxx <用于分组后取子集>)
     **窗口函数有点难的，可以多次练习**
         
-### 插入
+#### 插入
 
-#### ch8
+##### ch8
 
     insert 插入
         insert into table xxx(col1,col2,...,colx) values(val1,val2,...,valx)
 
-### 更新
+#### 更新
     
     update 更新
         update table set col=val where condition
 
-### 删除
+#### 删除
 
     delete 删除
         delete from table where condition
 
-### 条件表达式
+#### 条件表达式
 
     使用场景：基于数值类型的colume生成新的colume
 
@@ -113,30 +116,30 @@
 
     2、case when condtion1 then value1 when condition2 then value2 else result end
 
-### count
+#### count
 
     进行记录条目数的计算，通常还会与 distinct 一起使用来剔除指为null的列
 
-### as
+#### as
 
     将结果的列名进行重命名；或者对查询获得的底表(结果)进行重命名
 
-### union/union all
+#### union/union all
     
     与 jion 类似，都是两个表的联合查询，不同的是，jion是列数增加，丰富单个记录的属性数量；union是行数增加，丰富记录的条目数，所以有个前提是两个表的列数必须一致，且位置相同的列的数据类型必须一致。
     union 会删除重复的行
     union all 会保留重复的行
 
-### concat/concat_ws(concat_ws就是concat with separator)
+#### concat/concat_ws(concat_ws就是concat with separator)
 
     文本函数，将多个字符串进行拼接
 
-### 日期
+#### 日期
 
     可以参考 https://www.runoob.com/sql/sql-dates.html
     时间函数可以不用记得那么多，因为不同的数据库框架，能够使用的日期函数数量并不一样，可以在自己的ide的数据库组件中尝试实验后，再决定怎么使用。
     
-### 视图
+#### 视图
 
     视图语句通常使用在数据库的建表sql语句中，在code代码段中并不常见
 
@@ -145,3 +148,22 @@
     FROM table_name
     WHERE condition;
 
+## 其他的扩展
+    
+    边缘端，或者说基于服务类型的应用，所涉及的核心板块，有以下几个方面：
+    1、主业务(数据处理逻辑CURD)
+        接收：包括通过网络等接口获取所需的原始数据。
+        保存：将接收数据按照特定的结构化方式进行存储。
+        处理：接收用户或者管理员请求，对数据进行处理，并可以按照一定的方式(如RestfulAPI)输送到前端进行展示
+    2、日志系统，将程序运行状态及用户操作按照时间序列进行记录，并放入文件或者数据库，以供调试或者业务处理流程说明
+    3、升级/回滚/健康检查等维护性功能
+
+### 进度条
+
+    通常用来形象化表示下载、更新进度等，实现方式基于现成的库或者自己编写printf函数
+    1、基于库 indicators库 https://github.com/p-ranav/indicators.git
+    2、自己编写printf库 参考视频 https://www.bilibili.com/video/BV1AkFvewE1y/
+
+### 下载文件
+
+    基于openssl和libcurl的文件下载功能

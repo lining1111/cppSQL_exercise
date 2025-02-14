@@ -32,3 +32,7 @@ target_link_libraries(ch10 ${LIBS})
 
 add_executable(condition condition.cpp ${SRC_FILES})
 target_link_libraries(condition ${LIBS})
+
+##进度条测试，基于indicators库 https://github.com/p-ranav/indicators.git
+add_executable(test_progressbar test_progressbar.cpp ${SRC_FILES})
+target_link_libraries(test_progressbar ${LIBS})

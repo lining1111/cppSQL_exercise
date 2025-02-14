@@ -4,21 +4,21 @@
 list(APPEND poco_COMPONENT_NAMES Poco::Foundation Poco::Crypto Poco::Data Poco::Encodings Poco::JSON Poco::Net Poco::XML Poco::DataPostgreSQL Poco::DataSQLite Poco::JWT Poco::MongoDB Poco::Redis Poco::Util Poco::ActiveRecord Poco::NetSSL Poco::Zip)
 list(REMOVE_DUPLICATES poco_COMPONENT_NAMES)
 if(DEFINED poco_FIND_DEPENDENCY_NAMES)
-  list(APPEND poco_FIND_DEPENDENCY_NAMES PCRE2 expat SQLite3 OpenSSL ZLIB PostgreSQL)
+  list(APPEND poco_FIND_DEPENDENCY_NAMES PCRE2 expat SQLite3 PostgreSQL OpenSSL ZLIB)
   list(REMOVE_DUPLICATES poco_FIND_DEPENDENCY_NAMES)
 else()
-  set(poco_FIND_DEPENDENCY_NAMES PCRE2 expat SQLite3 OpenSSL ZLIB PostgreSQL)
+  set(poco_FIND_DEPENDENCY_NAMES PCRE2 expat SQLite3 PostgreSQL OpenSSL ZLIB)
 endif()
 set(PCRE2_FIND_MODE "NO_MODULE")
 set(expat_FIND_MODE "NO_MODULE")
 set(SQLite3_FIND_MODE "NO_MODULE")
+set(PostgreSQL_FIND_MODE "NO_MODULE")
 set(OpenSSL_FIND_MODE "NO_MODULE")
 set(ZLIB_FIND_MODE "NO_MODULE")
-set(PostgreSQL_FIND_MODE "NO_MODULE")
 
 ########### VARIABLES #######################################################################
 #############################################################################################
-set(poco_PACKAGE_FOLDER_DEBUG "/home/lining/.conan2/p/b/pocof7b1e646da2e5/p")
+set(poco_PACKAGE_FOLDER_DEBUG "/home/lining/.conan2/p/b/poco43c2e76138aa3/p")
 set(poco_BUILD_MODULES_PATHS_DEBUG )
 
 

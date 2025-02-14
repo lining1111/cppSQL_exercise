@@ -13,7 +13,7 @@ set(ZLIB_FIND_MODE "MODULE")
 
 ########### VARIABLES #######################################################################
 #############################################################################################
-set(openssl_PACKAGE_FOLDER_DEBUG "/home/lining/.conan2/p/b/opens06246c736a198/p")
+set(openssl_PACKAGE_FOLDER_DEBUG "/home/lining/.conan2/p/b/opens8092ce77e12bb/p")
 set(openssl_BUILD_MODULES_PATHS_DEBUG "${openssl_PACKAGE_FOLDER_DEBUG}/lib/cmake/conan-official-openssl-variables.cmake")
 
 

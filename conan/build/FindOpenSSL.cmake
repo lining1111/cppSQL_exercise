@@ -25,7 +25,7 @@ foreach(_DEPENDENCY ${openssl_FIND_DEPENDENCY_NAMES} )
     endif()
 endforeach()
 
-set(OpenSSL_VERSION_STRING "3.2.2")
+set(OpenSSL_VERSION_STRING "3.1.2")
 set(OpenSSL_INCLUDE_DIRS ${openssl_INCLUDE_DIRS_DEBUG} )
 set(OpenSSL_INCLUDE_DIR ${openssl_INCLUDE_DIRS_DEBUG} )
 set(OpenSSL_LIBRARIES ${openssl_LIBRARIES_DEBUG} )
@@ -41,7 +41,7 @@ endforeach()
 
 include(FindPackageHandleStandardArgs)
 set(OpenSSL_FOUND 1)
-set(OpenSSL_VERSION "3.2.2")
+set(OpenSSL_VERSION "3.1.2")
 
 find_package_handle_standard_args(OpenSSL
                                   REQUIRED_VARS OpenSSL_VERSION

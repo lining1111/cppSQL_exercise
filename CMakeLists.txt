@@ -13,8 +13,11 @@ find_package(SQLite3 REQUIRED)
 find_package(fmt REQUIRED)
 find_package(Poco REQUIRED)
 find_package(xpack REQUIRED)
+find_package(CURL REQUIRED)
+find_package(OpenSSL REQUIRED)
+find_package(indicators REQUIRED)
 
-set(LIBS m pthread gflags::gflags glog::glog SQLite::SQLite3 fmt::fmt Poco::Poco xpack::xpack)
+set(LIBS m pthread gflags::gflags glog::glog SQLite::SQLite3 fmt::fmt Poco::Poco xpack::xpack CURL::libcurl openssl::openssl indicators::indicators)
 
 #cmake依赖
 set(CMAKE_MODULE_PATH "${CMAKE_CURRENT_SOURCE_DIR}/cmake;${CMAKE_MODULE_PATH}")

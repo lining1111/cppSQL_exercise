@@ -26,7 +26,7 @@
         {
             "name": "conan-debug",
             "configurePreset": "conan-debug",
-            "jobs": 4
+            "jobs": 2
         }
     ],
     "testPresets": [
@@ -34,7 +34,7 @@
             "name": "conan-debug",
             "configurePreset": "conan-debug",
             "environment": {
-                "OPENSSL_MODULES": "/home/lining/.conan2/p/b/opens06246c736a198/p/lib/ossl-modules"
+                "OPENSSL_MODULES": "/home/lining/.conan2/p/b/opens8092ce77e12bb/p/lib/ossl-modules"
             }
         }
     ]
