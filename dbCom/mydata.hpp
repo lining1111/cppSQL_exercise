@@ -61,11 +61,23 @@ namespace mydata {
         float distance;//旅行距离
     } Rides;
 
-    typedef struct CH13_products{
-        string id;
-        string store;
-        float price;
-    }CH13_products;
+    typedef struct CH13_products {
+        string id;//产品id
+        string store;//产品售卖商店
+        float price;//产品价格
+    } CH13_products;
+
+    typedef struct CH14_department {
+        string id;//部门id
+        string name;//部门名称
+    } CH14_department;
+
+    typedef struct CH14_employee {
+        string id;//雇员id
+        string name;//雇员姓名
+        float salary;//薪资
+        string departmentID;//部门id
+    } CH14_employee;
 
 }
 
