@@ -158,6 +158,9 @@
     查找每个部门中薪资最高的员工
     员工表(id，name，salary，departmentID)员工id，员工姓名，薪资，部门id
     部门表(id，name)部门id，部门名称
+    ch15 with的用法
+    查询用户分数大于其所在工作(Job)分数的平均分的所在成绩表Grade属性
+    成绩表(id，job，score)
 
 ## 其他的扩展
     

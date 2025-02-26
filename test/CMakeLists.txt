@@ -42,6 +42,9 @@ target_link_libraries(ch13 ${LIBS})
 add_executable(ch14 ch14.cpp ${SRC_FILES})
 target_link_libraries(ch14 ${LIBS})
 
+add_executable(ch15 ch15.cpp ${SRC_FILES})
+target_link_libraries(ch15 ${LIBS})
+
 add_executable(condition condition.cpp ${SRC_FILES})
 target_link_libraries(condition ${LIBS})
 

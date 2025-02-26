@@ -79,6 +79,12 @@ namespace mydata {
         string departmentID;//部门id
     } CH14_employee;
 
+    typedef struct CH15_grade{
+        string id;//
+        string job;
+        float score;
+    }CH15_grade;
+
 }
 
 
